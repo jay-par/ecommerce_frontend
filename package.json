@@ -1,0 +1,30 @@
+{
+  "name": "ecommerce_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr-jayp/ecommerce_frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr-jayp/ecommerce_frontend/issues"
+  },
+  "homepage": "https://github.com/mr-jayp/ecommerce_frontend#readme",
+  "dependencies": {
+    "@types/node": "^13.1.0",
+    "@types/react": "^16.9.17",
+    "next": "^9.1.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typescript": "^3.7.4"
+  }
+}
