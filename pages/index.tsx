@@ -1,4 +1,4 @@
-import Layout from '../components/MyLayout';
+import Layout from '../components/MainLayout';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 
@@ -28,11 +28,15 @@ const PostLink = ({ product }) => (
   </li>
 );
 
+const Image = props => {
+  return <img {...props} style={{ maxWidth: '100%' }} />;
+};
+
 const Index = props => {
   console.log('props', props);
   return (
     <Layout>
-      <h1>Cool Sunglasses</h1>
+      <Image src="https://images.unsplash.com/photo-1470526446583-d0fe2363d8cb?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjU2Mjk4fQ" />
       <ul>
         {props.products.map(product => (
           <li key={product.name}>

@@ -1,4 +1,4 @@
-import Layout from '../../components/MyLayout';
+import Layout from '../../components/MainLayout';
 import Markdown from 'react-markdown';
 import { getProductById } from '../../apis/backend';
 
@@ -7,7 +7,6 @@ function Image(props) {
 }
 
 const Post = props => {
-  console.log('props', props);
   return (
     <Layout>
       <div className="markdown">
@@ -51,23 +50,8 @@ ${props.product.description.replace(/<[/]?[pb]>/g, '')}
 
 Post.getInitialProps = async function(context) {
   const { id } = context.query;
-  console.log('id', id);
   const data = await getProductById(id);
-  console.log(`Fetched producat: ${data}`);
-
   return { product: data };
 };
-// Post.getInitialProps = async function(context) {
-//   console.log('contrext', context);
-//   const { data } = await getProductById(context.query);
-
-//   const { id } = context.query;
-//   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
-//   const show = await res.json();
-
-//   console.log(`Fetched show: ${show.image.medium}`);
-
-//   return { show };
-// };
 
 export default Post;
