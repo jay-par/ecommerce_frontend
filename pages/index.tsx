@@ -8,11 +8,23 @@ const Image = props => {
 };
 
 const ProductCard = ({ product }) => (
-  <div className="product-card">
-    <Image src={product.imageUrl} className="thumbnail" />
+  <div>
     <Link href="/p/[_id]" as={`/p/${product._id}`}>
-      <a>{product.name}</a>
+      <div className="ui card">
+        <div className="image">
+          <Image src={product.imageUrl} className="thumbnail" />
+        </div>
+
+        <div className="content">
+          <a className="header">{product.name}</a>
+          <div className="meta">
+            <span className="price">${product.price}</span>
+          </div>
+          <div className="description">{product.description}</div>
+        </div>
+      </div>
     </Link>
+
     <style jsx>{`
       a {
         text-decoration: none;
@@ -23,11 +35,16 @@ const ProductCard = ({ product }) => (
       a:hover {
         opacity: 0.6;
       }
+      .product-info {
+        display: flex;
+        justify-content: space-between;
+      }
     `}</style>
   </div>
 );
 
 const Index = props => {
+  console.log(props);
   return (
     <Layout>
       <div className="hero">

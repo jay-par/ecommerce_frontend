@@ -28,8 +28,7 @@ const Header = () => (
         display: flex;
         justify-content: space-between;
       }
-      .left {
-      }
+
       .right {
         margin-top: auto;
         margin-bottom: auto;

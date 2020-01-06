@@ -12,10 +12,15 @@ const Layout = props => (
 
       {props.children}
     </div>
-    <style jsx>{`
-      max-width: 1500px;
-      margin: auto;
-    `}</style>
+    <style jsx>
+      {`
+        max-width: 1500px;
+        margin: auto;
+        .site {
+          margin: 20px;
+        }
+      `}
+    </style>
   </div>
 );
 
