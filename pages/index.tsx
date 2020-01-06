@@ -9,12 +9,11 @@ const Image = props => {
 
 const ProductCard = ({ product }) => (
   <div>
-    <Link href="/p/[_id]" as={`/p/${product._id}`}>
-      <div className="ui card">
-        <div className="image">
-          <Image src={product.imageUrl} className="thumbnail" />
-        </div>
-
+    <div className="ui card">
+      <div className="image">
+        <Image src={product.imageUrl} className="thumbnail" />
+      </div>
+      <Link href="/p/[_id]" as={`/p/${product._id}`}>
         <div className="content">
           <a className="header">{product.name}</a>
           <div className="meta">
@@ -22,8 +21,11 @@ const ProductCard = ({ product }) => (
           </div>
           <div className="description">{product.description}</div>
         </div>
+      </Link>
+      <div className="ui primary button">
+        <i className="shop icon"></i> Add to Cart
       </div>
-    </Link>
+    </div>
 
     <style jsx>{`
       a {

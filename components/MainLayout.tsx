@@ -17,7 +17,8 @@ const Layout = props => (
         max-width: 1500px;
         margin: auto;
         .site {
-          margin: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
         }
       `}
     </style>
