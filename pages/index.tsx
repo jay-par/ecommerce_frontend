@@ -22,7 +22,7 @@ const ProductCard = ({ product }) => (
           <div className="description">{product.description}</div>
         </div>
       </Link>
-      <div className="ui primary button">
+      <div className="ui teal button">
         <i className="shop icon"></i> Add to Cart
       </div>
     </div>

@@ -11,12 +11,12 @@ const backend = axios.create({
 });
 
 export const getProducts = async () => {
-  return await backend.get('/product');
+  return await backend.get('/products');
 };
 
 export const getProductById = async (id: String) => {
   console.log('getProductById', id);
-  const { data } = await backend.get(`/product/${id}`);
+  const { data } = await backend.get(`/products/${id}`);
   console.log('getProductById p', data);
   return data;
 };
