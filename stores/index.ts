@@ -1,5 +1,5 @@
-import CartStore from './CartStore';
+//import CartStore from './CartStore';
 
 export default {
-  cartStore: new CartStore()
+  //cartStore: new CartStore()
 };
