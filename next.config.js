@@ -1,4 +1,10 @@
 module.exports = {
+  exportTrailingSlash: true,
+  exportPathMap: function() {
+    return {
+      '/': { page: '/' }
+    };
+  },
   publicRuntimeConfig: {
     // Will be available on both server and client
     //BACKEND_URL: 'http://localhost:3010/api/v1',
