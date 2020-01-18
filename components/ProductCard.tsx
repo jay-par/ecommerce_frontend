@@ -1,7 +1,5 @@
 import React from 'react';
-type Product = {
-  imageRef: String;
-};
+import Product from '../models/Product';
 
 class ImageCard extends React.Component<{}, Product> {
   render() {
