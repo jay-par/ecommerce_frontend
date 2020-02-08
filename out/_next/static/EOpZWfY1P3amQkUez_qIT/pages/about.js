@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{TaPz:function(n,u,t){"use strict";t.r(u);var a=t("q1tI"),e=t.n(a),o=t("rg54"),i=e.a.createElement;u.default=function(){return i(o.a,null,i("p",null,"This is the about page!"))}},hIud:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/about",function(){return t("TaPz")}])}},[["hIud",0,1]]]);
