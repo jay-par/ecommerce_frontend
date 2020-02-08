@@ -8,9 +8,7 @@ import Image from '../components/Image';
 const Index = props => {
   return (
     <Layout>
-      <div className="hero">
-        <Image src="https://images.unsplash.com/photo-1470526446583-d0fe2363d8cb?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjU2Mjk4fQ" />
-      </div>
+      <div className="hero"></div>
       <div className="catalog">
         {props.products.map(product => (
           <div key={product.name}>
@@ -24,6 +22,12 @@ const Index = props => {
           grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
           grid-gap: 0 10px;
           grid-row-gap: 15px;
+        }
+
+        .hero {
+          background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=edges&fit=crop&h=500&w=1500');
+          height: 500px;
+          margin-bottom: 20px;
         }
 
         .product-card {

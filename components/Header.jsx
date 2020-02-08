@@ -9,13 +9,11 @@ const linkStyle = {
 };
 
 const Header = props => {
-  console.log('header props', props.items);
   return (
     <div className="topbar">
       <div className="left">
         <h1>Sunglasses Inc.</h1>
-        <h1>Items in cart: {props.items.length}</h1>
-        <h1>Price in cart:</h1>
+        <h1>Price in cart: {props.items.reduce((origPrice, product) => origPrice + product.price, 0)}</h1>
       </div>
       <div className="right">
         <Link href="/">
@@ -25,7 +23,9 @@ const Header = props => {
           <a style={linkStyle}>About</a>
         </Link>
         <Link href="/cart">
-          <a style={linkStyle}>Cart</a>
+          <a style={linkStyle}>
+            <i className="shop icon" />({props.items.length})
+          </a>
         </Link>
       </div>
       <style jsx>{`
@@ -34,6 +34,11 @@ const Header = props => {
           width: inherit;
           display: flex;
           justify-content: space-between;
+        }
+
+        a {
+          color: black;
+          font-size: 18px;
         }
 
         .right {
